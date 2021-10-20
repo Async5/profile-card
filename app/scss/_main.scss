@@ -1,0 +1,87 @@
+.main {
+  width: 100%;
+  height: 100vh;
+
+  .card {
+    max-width: 21.875rem;
+    min-height: 23.4375rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: calc(100% - 3.125rem);
+    background-color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    &__image {
+      min-height: 8.8125rem;
+      background-image: url('../../app/images/bg-pattern-card.svg');
+      background-repeat: no-repeat;
+
+      .avatar {
+        width: 6.625rem;
+        height: 6.625rem;
+        background-color: white;
+        border-radius: 50%;
+        transform: translateY(70%);
+
+        img {
+          border-radius: 50%;
+          width: 90%;
+          height: 90%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__text {
+      text-align: center;
+      margin-top: 4.625rem;
+
+      .nameage {
+        margin-bottom: 0.75rem;
+
+        h2 {
+          margin-right: 0.625rem;
+        }
+
+        span {
+          color: $dark-grayish-blue;
+          font-size: 1.125rem;
+        }
+      }
+
+      .country {
+        font-size: 1rem;
+        color: $dark-grayish-blue;
+        margin-bottom: 1.6875rem;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        min-height: 5.5625rem;
+        border-top: 1px solid $dark-gray;
+        padding: 0 2.9375rem;
+
+        @include breakpoint-down {
+          flex-direction: column;
+          padding: 2rem 2.9375rem;
+        }
+
+        &-item {
+          @include breakpoint-down {
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: 700;
+            color: $very-dark-desaturated-blue;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
